@@ -1,0 +1,76 @@
+version: '3'
+services:
+    pwn_1_ez:
+        #security_opt:
+        #  - seccomp:unconfined
+        #cap_add:
+        #  - SYS_PTRACE
+        container_name: pwn_1_ez
+        build: ./pwn_1_ez
+        ports:
+            - "31338:31338"
+        deploy:
+          resources:
+            limits:
+              cpus: '0.50'
+              memory: 300M
+            reservations:
+              cpus: '0.25'
+              memory: 128M
+
+    pwn_2_ez:
+        container_name: pwn_2_ez
+        build: ./pwn_2_ez
+        ports:
+            - "31339:31339"
+        tty: true
+        deploy:
+          resources:
+            limits:
+              cpus: '0.50'
+              memory: 300M
+            reservations:
+              cpus: '0.25'
+              memory: 128M
+
+    pwn_3_med:
+        container_name: pwn_3_med
+        build: ./pwn_3_med
+        ports:
+            - "31340:31340"
+        deploy:
+          resources:
+            limits:
+              cpus: '0.50'
+              memory: 300M
+            reservations:
+              cpus: '0.25'
+              memory: 128M
+
+    pwn_4_med:
+        container_name: pwn_4_med
+        build: ./pwn_4_med
+        ports:
+            - "31341:31341"
+        deploy:
+          resources:
+            limits:
+              cpus: '0.50'
+              memory: 300M
+            reservations:
+              cpus: '0.25'
+              memory: 128M
+
+    pwn_5_med:
+        container_name: pwn_5_med
+        build: ./pwn_5_med
+        ports:
+            - "31342:31342"
+        deploy:
+          resources:
+            limits:
+              cpus: '0.50'
+              memory: 300M
+            reservations:
+              cpus: '0.25'
+              memory: 128M
